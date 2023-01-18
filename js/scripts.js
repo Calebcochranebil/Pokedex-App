@@ -1,9 +1,19 @@
-alert('Hello world');
+let pokemonList = [ 
+    {
+    name: 'Arbok', 
+    type: 'Poison', 
+    height: '3.5 m'
+    },
 
-let favoriteFood = 'Pizza';
-document.write(favoriteFood);
+    {
+    name: 'Golbat',
+    type: ['Poison','Flying'],
+    height: '1.6 m'
+    } ,
 
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
+    {
+    name: 'Nidoking',
+    type: ['Ground','Poison'],
+    height: '1.6 m'
+    },
+];
