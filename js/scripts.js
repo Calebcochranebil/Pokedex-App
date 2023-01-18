@@ -1,7 +1,7 @@
 let pokemonList = [ 
     {
     name: 'Arbok', 
-    type: 'Poison', 
+    type: ['Poison'], 
     height: '3.5 m'
     },
 
