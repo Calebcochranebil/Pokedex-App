@@ -14,17 +14,20 @@ let pokemonRepository = (function() {
   height: 5.7
   }];
   
-  return {
-  getAll: function() {
-  // This returns all items in the pokemonList array
-  return pokemonList;
-  },
-  add: function(pokemon) {
-  // This adds a single item to the pokemonList array
-  pokemonList.push(pokemon);
-  }
-  };
-  })();
+    
+    function getAll () {
+    // This returns all items in the pokemonList array
+    return pokemonList;
+    }
+    function add(pokemon) {
+    // This adds a single item to the pokemonList array
+    pokemonList.push(pokemon);
+    }
+    return {
+      add: add,
+      getAll: getAll
+    }
+    })();
   
   let allPokemon = pokemonRepository.getAll();
   allPokemon.forEach(function(pokemon) {
