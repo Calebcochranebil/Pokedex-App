@@ -26,9 +26,26 @@ let pokemonRepository = (function () {
         // This adds a single item to the pokemonList array
         pokemonList.push(pokemon);
     }
+    function addListItem(pokemon) {
+        // Create a button for each Pokemon in the list above
+        let button = document.createElement("button");
+        button.innerHTML = pokemon.name;
+        document.body.appendChild(button);
+        addEventListenerToButton(button, pokemon);
+    }
+    function addEventListenerToButton(button, pokemon) {
+        button.addEventListener("click", function () {
+            showDetails(pokemon);
+        });
+    }
+    function showDetails(pokemon) {
+        console.log(pokemon.name);
+    }
     return {
         add: add,
         getAll: getAll,
+        addListItem: addListItem,
+        showDetails: showDetails,
     };
 })();
 
@@ -37,8 +54,7 @@ allPokemon.forEach(function (pokemon) {
     if (pokemon.height >= 5) {
         // If the height is greater than 5, this gets called
         document.write(
-            pokemon.name +
-                " (height: " +
+            " (height: " +
                 pokemon.height +
                 "m) - Wow, that is a really big Pokemon!!" +
                 "<br>"
@@ -46,20 +62,19 @@ allPokemon.forEach(function (pokemon) {
     } else if (pokemon.height >= 3 && pokemon.height < 4.9) {
         // If the height is greater than 3 and less than 4.9, this gets called
         document.write(
-            pokemon.name +
-                " (height: " +
+            " (height: " +
                 pokemon.height +
                 "m) - That is an average sized Pokemon!" +
                 "<br>"
         );
     } else {
-        // If the height isanything less, this gets called
+        // If the height is anything less, this gets called
         document.write(
-            pokemon.name +
-                " (height: " +
+            " (height: " +
                 pokemon.height +
                 "m) - That is a small Pokemon." +
                 "<br>"
         );
     }
+    pokemonRepository.addListItem(pokemon);
 });
