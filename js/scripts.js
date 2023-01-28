@@ -58,7 +58,7 @@ allPokemon.forEach(function (pokemon) {
             pokemon.name +
                 " (height: " +
                 pokemon.height +
-                "m) - That is a small pokemon." +
+                "m) - That is a small Pokemon." +
                 "<br>"
         );
     }
