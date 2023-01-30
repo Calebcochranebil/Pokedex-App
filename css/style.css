@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+#pokemon-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: start;
+    margin: 0 auto;
+    width: 30%;
+}
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+body {
+    background-color: #d8a951;
+}
