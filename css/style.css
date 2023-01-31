@@ -1,9 +1,14 @@
 h1 {
     text-align: center;
+    font-size: 40px;
+}
+body {
+    background-color: #d8a951;
 }
 #pokemon-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px;
     justify-content: center;
     align-content: start;
@@ -14,6 +19,28 @@ button {
     font-size: 20px;
     padding: 10px 20px;
 }
-body {
-    background-color: #d8a951;
+#pokemon-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px #ccc;
+    padding: 20px;
+    text-align: center;
+}
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
