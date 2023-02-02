@@ -2,46 +2,102 @@ h1 {
     text-align: center;
     font-size: 40px;
 }
-body {
-    background-color: #d8a951;
+
+.header {
+    padding: 0px 0px;
+    background: rgb(248, 248, 248); /* black background */
+    color: #d8a951; /* yellow text color */
+    border: 1px solid #d8a951; /* add a border */
+    border-width: 5px; /* adjust border width */
+    width: 50%;
+    margin: 0 auto; /* center the element */
 }
-#pokemon-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    display: flex;
     justify-content: center;
-    align-content: start;
-    margin: 0 auto;
-    width: 30%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    left: 25%;
 }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 10px;
+}
+
+/* Body styles */
+body {
+    background-color: #d8a951; /* yellow background color */
+}
+
+/* Pokemon container styles */
+#pokemon-container {
+    display: grid; /* display as a grid */
+    grid-template-columns: 1fr 1fr 1fr; /* three columns */
+    grid-template-rows: 1fr 1fr 1fr; /* three rows */
+    grid-gap: 20px; /* 20px gap between grid items */
+    justify-content: center; /* center justify */
+    align-content: start; /* align content to the start */
+    margin: 0 auto; /* center horizontally */
+    width: 45%; /* width of 45% */
+}
+
+/* Button styles */
 button {
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 50px 60px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
 }
+
+/* Pokemon modal styles */
 #pokemon-modal {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed; /* fixed position */
+    top: 0; /* stick to the top */
+    bottom: 0; /* stick to the bottom */
+    left: 0; /* stick to the left */
+    right: 0; /* stick to the right */
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* translucent black background color */
 }
+
+/* Modal content styles */
 .modal-content {
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 10px #ccc;
-    padding: 20px;
+    padding: 45px;
     text-align: center;
     position: relative;
 }
+
+/* Close button styles */
 .close-button {
     position: absolute;
     top: 0;
     right: 7px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Media query for screens less than 750px wide */
+@media (max-width: 750px) {
+    #pokemon-container {
+        grid-template-columns: 1fr; /* one column */
+        width: 90%; /* width of 90% */
+    }
 }
