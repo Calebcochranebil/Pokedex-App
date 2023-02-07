@@ -3,38 +3,15 @@ h1 {
     font-size: 40px;
 }
 
-.header {
-    padding: 0px 0px;
-    background: rgb(248, 248, 248); /* black background */
-    color: #d8a951; /* yellow text color */
-    border: 1px solid #d8a951; /* add a border */
-    border-width: 5px; /* adjust border width */
-    width: 50%;
-    margin: 0 auto; /* center the element */
-}
-.content {
-    padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 50%;
-    left: 25%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-    padding-top: 10px;
-}
-
 /* Body styles */
 body {
     background-color: #d8a951; /* yellow background color */
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 /* Pokemon container styles */

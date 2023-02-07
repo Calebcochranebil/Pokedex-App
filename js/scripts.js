@@ -119,25 +119,6 @@ let pokemonRepository = (function () {
         });
     }
 
-    window.onscroll = function () {
-        myFunction();
-    };
-
-    // Get the header
-    let header = document.getElementById("myHeader");
-
-    // Get the offset position of the navbar
-    let sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-
     return {
         add: add,
         getAll: getAll,
@@ -145,7 +126,6 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        myFunction: myFunction,
     };
 })();
 
