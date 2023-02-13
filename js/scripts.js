@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
     // Define an empty array of Pokemon objects
     let pokemonList = [];
-    let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=30";
+    let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=40";
 
     // Return the array of Pokemon objects
     function getAll() {
@@ -27,6 +27,7 @@ let pokemonRepository = (function () {
         let button = document.createElement("button");
         button.innerHTML =
             pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+        button.classList.add("btn", "btn-primary");
         container.appendChild(button);
         // Bind the event listener to the button
         addEventListenerToButton(button, pokemon);

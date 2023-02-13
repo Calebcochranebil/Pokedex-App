@@ -16,22 +16,26 @@ body {
 
 /* Pokemon container styles */
 #pokemon-container {
-    display: grid; /* display as a grid */
-    grid-template-columns: 1fr 1fr 1fr; /* three columns */
-    grid-template-rows: 1fr 1fr 1fr; /* three rows */
-    grid-gap: 20px; /* 20px gap between grid items */
-    justify-content: center; /* center justify */
-    align-content: start; /* align content to the start */
-    margin: 0 auto; /* center horizontally */
-    width: 45%; /* width of 45% */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 125px;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
-/* Button styles */
-button {
+.btn {
+    width: calc(25% - 10px);
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.btn-primary {
     font-size: 20px;
-    padding: 50px 60px;
+    color: black;
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
 }
 
 /* Pokemon modal styles */

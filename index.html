@@ -24,7 +24,10 @@
         <title>Simple JS App</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-light"
+            style="position: fixed; top: 0; width: 100%; padding: 20px"
+        >
             <a class="navbar-brand" href="#">POKEDEX</a>
             <button
                 class="navbar-toggler"
@@ -39,7 +42,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav"></div>
         </nav>
-        <ul class="pokemon-list"></ul>
+        <ul class="list-group pokemon-list"></ul>
         <strong>
             <script src="js/promise-polyfill.js"></script>
             <script src="js/fetch-polyfill.js"></script>
