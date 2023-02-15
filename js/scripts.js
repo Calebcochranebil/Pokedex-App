@@ -26,12 +26,12 @@ let pokemonRepository = (function () {
         let button = document.createElement("button");
         button.innerHTML =
             pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-        button.classList.add("btn", "btn-primary");
+        button.classList.add("button", "button-primary");
+        button.setAttribute("id", pokemon.name);
         container.appendChild(button);
 
-        // Bind the event listener to the button that calls the showDetails function
         button.addEventListener("click", function () {
-            showDetails(pokemon);
+            pokemonRepository.showDetails(pokemon);
         });
     }
 
@@ -88,40 +88,34 @@ let pokemonRepository = (function () {
     }
 
     // Show a modal with the details of a Pokemon
-    function showModal(pokemon) {
-        let modalTitle = document.querySelector("#pokemon-modal-label");
-        let modalBody = document.querySelector(".modal-body");
-
+    const showModal = (pokemon) => {
+        const modalTitle = document.querySelector("#pokemon-modal-label");
+        const modalBody = document.querySelector(".modal-body");
         modalTitle.textContent = pokemon.name;
-        modalBody.innerHTML = "";
-        let pokemonImg = document.createElement("img");
-        pokemonImg.src = pokemon.imageUrl;
-        modalBody.appendChild(pokemonImg);
-        let heightElement = document.createElement("p");
-        heightElement.textContent = "Height: " + pokemon.height;
-        modalBody.appendChild(heightElement);
-        let typesElement = document.createElement("p");
-        typesElement.textContent =
-            "Types: " + pokemon.types.map((type) => type.type.name).join(", ");
-        modalBody.appendChild(typesElement);
-
+        modalBody.innerHTML = `
+      <img src="${pokemon.imageUrl}">
+      <p>Height: ${pokemon.height}</p>
+      <p>Types: ${pokemon.types.map(({ type }) => type.name).join(", ")}</p>
+    `;
         $("#pokemon-modal").modal("show");
-    }
+    };
 
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function () {
-            showModal(pokemon);
+    const showDetails = (pokemon) => {
+        loadDetails(pokemon).then(() => {
+            console.log(pokemon);
+            pokemonRepository.showModal(pokemon);
         });
-    }
+    };
 
     return {
-        add: add,
-        getAll: getAll,
-        addListItem: addListItem,
-        loadList: loadList,
-        loadDetails: loadDetails,
-        showDetails: showDetails,
-        addEventListenerToButton: addEventListenerToButton,
+        add,
+        getAll,
+        addListItem,
+        loadList,
+        loadDetails,
+        showDetails,
+        showModal,
+        addEventListenerToButton,
     };
 })();
 
