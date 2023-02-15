@@ -28,11 +28,11 @@ let pokemonRepository = (function () {
             pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
         button.classList.add("button", "button-primary");
         button.setAttribute("id", pokemon.name);
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#pokemon-modal");
         container.appendChild(button);
 
-        button.addEventListener("click", function () {
-            pokemonRepository.showDetails(pokemon);
-        });
+        pokemonRepository.addEventListenerToButton(button, pokemon);
     }
 
     // Add an event listener to the button that opens a modal showing the details of a Pokemon when clicked
