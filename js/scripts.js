@@ -103,7 +103,7 @@ let pokemonRepository = (function () {
     const showDetails = (pokemon) => {
         loadDetails(pokemon).then(() => {
             console.log(pokemon);
-            pokemonRepository.showModal(pokemon);
+            showModal(pokemon);
         });
     };
 

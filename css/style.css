@@ -41,12 +41,23 @@ body {
     padding: 30px;
     margin-bottom: 20px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(
+        255,
+        255,
+        255
+    ); /* set initial background color to white */
+    transition: background-color 0.5s ease; /* only transition background color */
 }
 
 .button-primary {
     font-size: 20px;
     color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(255, 0, 0); /* set background color to red on hover */
+    color: #fff; /* set text color to white on hover */
     cursor: pointer;
 }
 
