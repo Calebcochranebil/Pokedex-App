@@ -21,7 +21,7 @@
         />
         <title>Pokedex</title>
     </head>
-    <body>
+    <header>
         <nav class="navbar navbar-light sticky-top" role="navigation">
             <span class="navbar-brand mb-0 h1">Pokedex</span>
             <form class="form-inline">
@@ -30,13 +30,19 @@
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
+                    id="search-input"
                 />
-                <button class="btn btn-warning my-2 my-sm-0" type="button">
-                    Submit
-                </button>
+                <button
+                    class="btn btn-pokemon-ball my-2 my-sm-0"
+                    type="button"
+                    id="search-button"
+                ></button>
             </form>
         </nav>
+    </header>
+    <body>
         <main>
+            <h2>Pokemon List</h2>
             <div
                 class="modal fade"
                 id="pokemon-modal"
@@ -62,7 +68,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <img src="" alt="Picture of the Pokemon" />
+                            <img src="pokemon" alt="Picture of the Pokemon" />
                         </div>
                     </div>
                 </div>

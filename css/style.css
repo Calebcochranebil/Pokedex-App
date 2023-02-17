@@ -4,6 +4,7 @@ h1 {
 }
 h2 {
     text-align: center;
+    font-size: 30px;
     margin-top: 40px;
 }
 
@@ -26,12 +27,30 @@ body {
     justify-content: flex-end;
 }
 
+.btn-pokemon-ball {
+    background-image: url("https://freesvg.org/img/Pokeball.png");
+    background-size: 100%; /* adjust the percentage as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px; /* hides the button text */
+    width: 30px; /* adjust as needed */
+    height: 30px; /* adjust as needed */
+    border: none; /* remove button border */
+    border-radius: 50%; /* make button round */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #cc0000; /* add a subtle shadow and border effect */
+}
+
+.btn-pokemon-ball:hover {
+    opacity: 0.8; /* add some opacity to make the button look clickable */
+    cursor: pointer; /* change the cursor on hover to indicate it's clickable */
+}
+
 /* Pokemon container styles */
 #pokemon-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 65px;
+    margin-top: 50px;
     margin-left: 75px;
     margin-right: 75px;
 }
@@ -41,24 +60,21 @@ body {
     padding: 30px;
     margin-bottom: 20px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(
-        255,
-        255,
-        255
-    ); /* set initial background color to white */
-    transition: background-color 0.5s ease; /* only transition background color */
+    background-size: 200% 100%;
+    position: relative;
 }
 
 .button-primary {
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: rgb(255, 0, 0); /* set background color to red on hover */
-    color: #fff; /* set text color to white on hover */
-    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: background-position 2s ease, background-color 2s ease;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0));
+    background-position: -100% 0;
 }
 
 .modal-body {
