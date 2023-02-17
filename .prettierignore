@@ -1,0 +1,3 @@
+# Ignore dist folder
+/dist/js
+/dist/css
