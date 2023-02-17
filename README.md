@@ -15,8 +15,9 @@ This repository contains the following functions that can be used to interact wi
 -   addEventListenerToButton(button, pokemon): adds an event listener to the button that opens a modal showing the details of a Pokemon when clicked
     Additionally, the code includes an event listener on a search button that uses the search(query) function to find a matching Pokemon and display its details in a modal.
 
-1. Technologies Used,
-2. JavaScript
-3. PokeAPI
-4. HTML
-5. CSS
+Technologies Used
+
+1. JavaScript
+2. PokeAPI
+3. HTML
+4. CSS
