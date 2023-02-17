@@ -14,9 +14,17 @@ body {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+.page-title {
+    padding-top: 75px;
+}
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #ccc;
 }
+
 .navbar-brand {
     font-size: xx-large;
     font-weight: bold;
