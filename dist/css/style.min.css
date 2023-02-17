@@ -1,0 +1,113 @@
+.modal-content,
+.pokemon-name,
+h1,
+h2 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+    margin-top: 40px;
+}
+body {
+    background-color: #d8a951;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.navbar {
+    background-color: #ccc;
+}
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: 700;
+}
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-pokemon-ball {
+    background-image: url("https://freesvg.org/img/Pokeball.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #c00;
+}
+.btn-pokemon-ball:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+#pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.button {
+    width: calc(25% - 10px);
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    background-size: 200% 100%;
+    position: relative;
+}
+.button-primary {
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #fff;
+    transition: background-position 2s, background-color 2s;
+    background: linear-gradient(to right, #fff, red);
+    background-position: -100% 0;
+}
+.modal-body {
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-body img {
+    height: 150px;
+    width: 150px;
+    margin-top: 30px;
+}
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px #ccc;
+    padding: 45px;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 30px;
+        align-items: center;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    #pokemon-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .button {
+        width: calc(50% - 10px);
+    }
+}
