@@ -1,4 +1,3 @@
-
 # Pokedex-App
 
 This is a list of Pokemons created with JavaScript. It uses an API to get a list of Pokemon and their details. This project taught me a lot. One thing I would have done differently is be more simple with my code.
@@ -14,7 +13,7 @@ This repository contains the following functions that can be used to interact wi
 -   showDetails(pokemon): shows a modal with the details of a specific Pokemon
 -   search(query): finds the first Pokemon object that matches the search query
 -   addEventListenerToButton(button, pokemon): adds an event listener to the button that opens a modal showing the details of a Pokemon when clicked
+
 Additionally, the code includes an event listener on a search button that uses the search(query) function to find a matching Pokemon and display its details in a modal.
 
 https://calebcochranebil.github.io/Pokedex-App/
-
